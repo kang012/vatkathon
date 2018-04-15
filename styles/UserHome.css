@@ -1,0 +1,31 @@
+@media (max-width: 767px) { 
+    .big-nav{
+        display: none;
+        visibility: hidden;
+    }
+    .topchart{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 767px) { 
+    .small-nav{
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+.mainview{
+    border: 1px solid  saddlebrown;
+    height: 900px;
+}
+.topchart{
+    border: 1px solid teal;
+    height: 900px;
+}
+.small-nav{
+    display: none;
+    visibility: hidden;
+}
