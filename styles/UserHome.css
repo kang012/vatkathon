@@ -3,16 +3,16 @@
         display: none;
         visibility: hidden;
     }
-    .topchart{
+    /* .topchart{
         display: none;
         visibility: hidden;
-    }
+    } */
 }
 
-@media (min-width: 767px) { 
+@media (max-width: 767px) { 
     .small-nav{
-        display: block;
-        visibility: visible;
+        display: block!important;
+        visibility: visible!important;
     }
 
 }
