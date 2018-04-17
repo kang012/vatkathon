@@ -12,29 +12,38 @@
 
 <body>
   <!-- Navbar-->
-  <nav class="navbar bg-dark navbar-dark fixed-top d-flex justify-content-center big-nav" style="height: 3vw;">
+  <nav class="navbar bg-dark navbar-dark fixed-top d-flex justify-content-around big-nav">
     <!-- Links -->
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="navbar-brand" href="#">VatKathon</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Collection</a>
-        </li>
-      </ul>
+    <ul class="nav text-light d-flex justify-content-end">
+      <li class="nav-item">
+        <a class="navbar-brand" href="#">VatKathon</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Collection</a>
+      </li>
+    </ul>
 
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" style="width:40vw;height:2vw;">
-      </form>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2 big-nav-search" type="search" placeholder="Search" style="width: 40vw;">
+    </form>
 
-      <div>
-        <a class="navbar-brand" href="#">
-          <img class="rounded-circle" src="./assets/images/avatar.png" alt="" style="width: 2.5vw;"> Pink Guy
-        </a>
+    <div class="btn-group user-menu">
+      <button type="button" class="btn btn-sm btn-dark">
+        <img class="rounded-circle" src="./assets/images/avatar.png" alt=""> Pink Guy</button>
+      <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
       </div>
+    </div>
 
   </nav>
 
@@ -63,7 +72,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-folder-open"></i>
+          <i class="fas fa-music"></i>
         </a>
       </li>
       <li class="nav-item">
@@ -73,7 +82,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-cog"></i>
+          <img class="rounded-circle" src="./assets/images/avatar.png" alt="" style="width: 10vw;">
         </a>
       </li>
     </ul>
