@@ -3,8 +3,6 @@
     display: none;
     visibility: hidden;
   }
-}
-@media (max-width: 767px) {
   .small-nav {
     display: block !important;
     visibility: visible !important;
@@ -40,12 +38,29 @@
 .small-nav a {
   font-size: 6vw;
 }
-
-.main-view {
+/* Main Content */
+/* .main-view {
   border: 1px solid saddlebrown;
   height: 900px;
-}
-.top-chart {
+} */
+
+/* .thumbnail-holder img{
+  width: 3vw;
+
+} */
+
+/* .top-chart {
   border: 1px solid teal;
   height: 900px;
+} */
+.topchart-item img {
+  width: 5vw;
+  height: 5vw;
+}
+.topchart-item th{
+  vertical-align: inherit;
+}
+/* Override Bootstrap  */
+.card {
+  border: none;
 }
