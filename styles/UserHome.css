@@ -23,7 +23,7 @@
 }
 /* Top NAV */
 .user-menu img {
-  width: 2.4vw;
+  width: 2.3vw;
 }
 #big-nav {
   height: 3vw;
@@ -41,11 +41,11 @@
   font-size: 6vw;
 }
 
-.mainview {
+.main-view {
   border: 1px solid saddlebrown;
   height: 900px;
 }
-.topchart {
+.top-chart {
   border: 1px solid teal;
   height: 900px;
 }
