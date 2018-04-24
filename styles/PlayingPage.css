@@ -78,3 +78,15 @@
 .track-name {
   font-size: 2.7rem;
 }
+
+.slider{
+  position: relative;
+  width: 3vw;
+  height: 1.5vw;
+  background: blue;
+  align-self: center;
+}
+
+.progress:hover{
+  overflow: visible;
+}

@@ -55,6 +55,9 @@
       <div class="main-view col-md-9 col-sm-12">
 
         <section class="collection-content">
+          <audio controls="">
+            <source src="./assets/audios/audio.mp3" type="audio/mpeg">
+          </audio>
           <div class="music-player">
             <!-- Need to make the background blur -->
             <div class="track-detail-player">
@@ -87,12 +90,13 @@
 
               <div class="progress" style="flex-basis: 50%;align-self: center;">
                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="slider"></div>
               </div>
 
               <!-- Song duration -->
               <div class="buttons-player">4:20</div>
               <!-- Vollume button -->
-              <div class="buttons-player"></div>
+              <div class="buttons-player"><i class="fas fa-volume-up"></i></div>
             </div>
           </div>
           <ul class="list-group">
