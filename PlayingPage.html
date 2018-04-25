@@ -55,22 +55,24 @@
       <div class="main-view col-md-9 col-sm-12">
 
         <section class="collection-content">
-          <audio id="music" controls="">
+          <audio id="music">
             <source src="./assets/audios/audio.mp3" type="audio/mpeg">
           </audio>
           <div class="music-player">
             <!-- Need to make the background blur -->
+            <!-- vollumn bar is not working-->
             <div class="track-detail-player">
               <div class="d-flex">
                 <div class="track-cover ml-2">
                   <img src="./assets/images/albumcover.jpg" class="img-fluid img-thumbnail" alt="" width="200px">
                 </div>
                 <div class="track-info text-light pl-5">
-                  <div class="track-name">STFU</div>
+                  <div class="track-detail-name">STFU</div>
                   <div class="">
-                    <div class="track-album">Pink Season</div>
-                    <div class="track-artist">Pink Guy</div>
+                    <div class="track-detail-album">Pink Season</div>
+                    <div class="track-detail-artist">Pink Guy</div>
                   </div>
+                  <div class="music-quality mt-5">320kbs</div>
                 </div>
               </div>
 
@@ -85,120 +87,136 @@
                 <i class="fas fa-fast-forward"></i>
               </div>
               <!-- Current time -->
-              <div class="buttons-player">0:00</div>
+              <div id="current-time" class="player-time buttons-player">0:00</div>
               <!-- Progress bar -->
 
-              <div id="progress-music" class="progress" style="flex-basis: 50%;align-self: center;">
-                <div id="progress-current-music"class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              <div id="progress-music" class="progress" style="flex-basis: 50%;align-self: center;border-radius: inherit">
+                <div id="progress-current-music" class="progress-bar" role="progressbar"></div>
                 <div id="slider"></div>
               </div>
 
               <!-- Song duration -->
-              <div class="buttons-player">4:20</div>
+              <div id="song-duration" class="player-time buttons-player">0:00</div>
               <!-- Vollume button -->
-              <div class="buttons-player"><i class="fas fa-volume-up"></i></div>
+              <div class="buttons-player">
+                <i class="fas fa-volume-up"></i>
+              </div>
             </div>
           </div>
-          <ul class="list-group">
-            <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
-            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+          <ul class="list-group" id='song-selector' >
+            <div href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex justify-content-between">
+                <div class="track-number">01</div>
+                <div class="track-name">
+                  <a href="#">STFU</a>
+                </div>
+                <div class="track-artists">
+                  <a href="#">Pink Guy</a>
+                </div>
+                <div class="track-tools">
+                  <a href="">
+                    <i class="fas fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex justify-content-between">
+                <div class="track-number">02</div>
+                <div class="track-name">
+                  <a href="#">Club Bangger 3000</a>
+                </div>
+                <div class="track-artists">
+                  <a href="#">Pink Guy</a>
+                </div>
+                <div class="track-tools">
+                  <a href="">
+                    <i class="fas fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex justify-content-between">
+                <div class="track-number">03</div>
+                <div class="track-name">
+                  <a href="#">High School Blink 193</a>
+                </div>
+                <div class="track-artists">
+                  <a href="#">Pink Guy</a>
+                </div>
+                <div class="track-tools">
+                  <a href="">
+                    <i class="fas fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex justify-content-between">
+                <div class="track-number">04</div>
+                <div class="track-name"><a href="#">I do it for my hood</a></div>
+                <div class="track-artists"><a href="#">Pink Guy</a></div>
+                <div class="track-tools"><a href=""><i class="fas fa-heart"></i></a></div>
+              </div>              
+            </div>
+            <div href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex justify-content-between">
+                <div class="track-number">05</div>
+                <div class="track-name"><a href="#">Fried Noodle</a></div>
+                <div class="track-artists"><a href="#">Pink Guy</a></div>
+                <div class="track-tools"><a href=""><i class="fas fa-heart"></i></a></div>
+              </div>              
+            </div>
           </ul>
         </section>
         <section class="mt-5">
-            <div class="card bg-light mb-3">
-                <div class="card-header">Lyric</div>
-                <div class="card-body">
-                  <h5 class="card-title">STFU - Pink Guy</h5>
-                  <p class="card-text">[Chorus]
-                      Shut the fuck up
-                      You're a fucking cunt
-                      Shut the fuck up
-                      You're a stupid cunt, suck my dick
-                      Shut the fuck up
-                      Stop being a fucking cunt
-                      Shut the fuck up
-                      Nobody even wants you here
-                      <br>
-                      <br>
-
-                      [Instrumental]
-                      <br>        
-                      <br>
-              
-                      [Verse 1]
-                      I just wanna let you know, you're a stupid fucking cunt
-                      Go ahead and run your mouth, pussy, I don't give a fuck
-                      You're a stupid piece of shit, you're a stupid fucking bitch
-                      Get the fuck up off my dick, get the fuck up off my dick, like
-                      Please end your fucking life, please end your fucking life
-                      I really gotta emphasize, no one cares if you're alive
-                      You're a fucking penis-hole, grab a dick and eat it whole
-                      I need to know if you were dropped when you were just a fetus though
-                      You're so fucking ugly and your face is fucking foul, jeez
-                      You're so fucking loud, can you shut your fucking mouth, can you
-                      <br>
-                      <br>
-
-                      [Chorus]
-                      Shut the fuck up
-                      You're a fucking cunt
-                      Shut the fuck up
-                      You're a stupid cunt, suck my dick
-                      Shut the fuck up
-                      Stop being a fucking cunt
-                      Shut the fuck up
-                      Nobody even wants you here, yo
-                      <br>
-                      <br>
-
-                      [Verse 2]
-                      Close your fucking mouth, you're just really fucking dense
-                      If you hate me, why you talking?
-                      You don't make no fucking sense
-                      Got a sad life, sad life, go to fucking hell
-                      Are you stupid or disabled? Man, I can't fucking tell (meh)
-                      You're a fucking dumb shit, you don't even run shit
-                      Get the fuck up out of my face and go to hell and eat a dick
-                      Come and catch these hands, boy
-                      Come and match these bands, boy
-                      I'm not crazy, I just do it all because I can, boy
-                      I hope you fucking die in a high-speed car crash
-                      I hope you fucking fall head-first and get your neck cracked
-                      I hope you have some beautiful children that die from cancer
-                      I hope you catch Zika when your wife gets pregnant
-                      I hope you win the lottery and die the next day
-                      And your daughter has to see you getting lowered in your grave
-                      <br>
-                      <br>
-
-                      [Outro]
-                      (Like, ooh, uh-that was a little dark)
-                      (I'm sorry)
-                      (Tha-that was a little dark)
-                      (Very poor taste)
-                      Shut the fuck up
-                      (I shouldn't have said that)
-                      You're a fucking cunt
-                      (Actually, no, I should've)
-                      Shut the fuck up
-                      (Actually, I didn't say enough)
-                      You're a stupid cunt, suck my dick
-                      Shut the fuck up
-                      Stop being a fucking cunt
-                      Shut the fuck up
-                      Nobody even wants you here</p>
-                </div>
-              </div>
+          <div class="card bg-light mb-3">
+            <div class="card-header">Lyric</div>
+            <div id="lyric-content" class="card-body">
+              <h5 class="card-title">STFU - Pink Guy</h5>
+              <p class="card-text">[Chorus] Shut the fuck up You're a fucking cunt Shut the fuck up You're a stupid cunt, suck my dick Shut the
+                fuck up Stop being a fucking cunt Shut the fuck up Nobody even wants you here
+                <br>
+                <br> [Instrumental]
+                <br>
+                <br> [Verse 1] I just wanna let you know, you're a stupid fucking cunt Go ahead and run your mouth, pussy, I
+                don't give a fuck You're a stupid piece of shit, you're a stupid fucking bitch Get the fuck up off my dick,
+                get the fuck up off my dick, like Please end your fucking life, please end your fucking life I really gotta
+                emphasize, no one cares if you're alive You're a fucking penis-hole, grab a dick and eat it whole I need
+                to know if you were dropped when you were just a fetus though You're so fucking ugly and your face is fucking
+                foul, jeez You're so fucking loud, can you shut your fucking mouth, can you
+                <br>
+                <br> [Chorus] Shut the fuck up You're a fucking cunt Shut the fuck up You're a stupid cunt, suck my dick Shut
+                the fuck up Stop being a fucking cunt Shut the fuck up Nobody even wants you here, yo
+                <br>
+                <br> [Verse 2] Close your fucking mouth, you're just really fucking dense If you hate me, why you talking? You
+                don't make no fucking sense Got a sad life, sad life, go to fucking hell Are you stupid or disabled? Man,
+                I can't fucking tell (meh) You're a fucking dumb shit, you don't even run shit Get the fuck up out of my
+                face and go to hell and eat a dick Come and catch these hands, boy Come and match these bands, boy I'm not
+                crazy, I just do it all because I can, boy I hope you fucking die in a high-speed car crash I hope you fucking
+                fall head-first and get your neck cracked I hope you have some beautiful children that die from cancer I
+                hope you catch Zika when your wife gets pregnant I hope you win the lottery and die the next day And your
+                daughter has to see you getting lowered in your grave
+                <br>
+                <br> [Outro] (Like, ooh, uh-that was a little dark) (I'm sorry) (Tha-that was a little dark) (Very poor taste)
+                Shut the fuck up (I shouldn't have said that) You're a fucking cunt (Actually, no, I should've) Shut the
+                fuck up (Actually, I didn't say enough) You're a stupid cunt, suck my dick Shut the fuck up Stop being a
+                fucking cunt Shut the fuck up Nobody even wants you here</p>
+            </div>
+            <div class="card-text">
+              <button id="expand-lyric" href="">View more</button>
+            </div>
+          </div>
         </section>
-        
+
         <section class="collection-content">
-          <h1 class="text-center mt-2">Top Trending</h1>
+          <h1 class="mt-2">
+            <a class="text-dark" href="#">Album Pink Guy</a>
+          </h1>
           <!--Add owl carousel-->
-          <div class="card-deck owl-carousel mt-3"> 
-            
+          <div class="card-deck owl-carousel mt-3">
+
             <div class="card thumbnail-holder">
               <img class="card-img-top img-fluid" src="./assets/images/albumcover.jpg" alt="Card image cap">
               <h6 class="">Pink Season</h6>

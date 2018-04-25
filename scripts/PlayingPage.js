@@ -2,11 +2,16 @@ var prevScrollPos = window.pageYOffset;
 var bigNav = document.getElementById('big-nav');
 var slider = document.getElementById('slider');
 var music = document.getElementById('music');
+var currentTime = document.getElementById('current-time');
+var songDuration = document.getElementById('song-duration');
 var playButton = document.getElementById('play-button');
 var progressMusic = document.getElementById('progress-music');
 var currentProgress = document.getElementById('progress-current-music');
+var expandLyric = document.getElementById('expand-lyric');
+var lyricContent = document.getElementById('lyric-content');
 var progressMusicWidth = progressMusic.offsetWidth - slider.offsetWidth;
 var onHold = false;
+var lyricNotExpended = true;
 $(document).ready(function () {
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -40,10 +45,24 @@ window.onscroll = function hideNav() {
   }
   prevScrollPos = currentScrollPos;
 };
+// Convert second to min:sec
+function secondToMin(second) {
+  var sec = Math.floor(second) % 60;
+  var min = Math.round(Math.floor(second) / 60);
+  if (sec < 10) {
+    return min + ':0' + sec;
+  }
+  return min + ':' + sec;
+}
 // sync slider with current music time
 function timeUpdate() {
   var playTime = progressMusicWidth * (music.currentTime / music.duration);
-  currentProgress.style.width = (playTime - (slider.offsetWidth / 2)) + 'px';
+  currentProgress.style.width = ((playTime - slider.offsetWidth) / 2) + 'px';
+  currentTime.innerHTML = secondToMin(music.currentTime);
+  songDuration.innerHTML = secondToMin(music.duration);
+  if (music.ended) {
+    playButton.innerHTML = '<i class="fas fa-play"></i>';
+  }
 }
 function clickPlay() {
   if (music.paused) {
@@ -63,7 +82,7 @@ function clickPercent(event) {
 }
 function moveSlider(event) {
   // get width base on mouse coordinate
-  var newPos = event.clientX - getPosition(progressMusic) - (slider.offsetWidth / 2);
+  var newPos = ((event.clientX - getPosition(progressMusic)) - slider.offsetWidth) / 2;
   if (newPos > 0 && newPos < progressMusic.offsetWidth) {
     currentProgress.style.width = newPos + 'px';
   } else if (newPos < 0) {
@@ -83,10 +102,21 @@ function mouseUp(event) {
     window.removeEventListener('mousemove', moveSlider);
     music.currentTime = music.duration * clickPercent(event);
     music.addEventListener('timeupdate', timeUpdate);
-    console.log();
-    
   }
   onHold = false;
+}
+function viewMoreLyric() {
+  if (lyricNotExpended) {
+    lyricContent.style.height = 'auto';
+    lyricContent.style.overflow = 'visible';
+    expandLyric.innerHTML = 'View Less';
+    lyricNotExpended = false;
+  } else {
+    lyricContent.style.height = '50vh';
+    lyricContent.style.overflow = 'hidden';
+    expandLyric.innerHTML = 'View More';
+    lyricNotExpended = true;
+  }
 }
 // Toggle Play/Pause button
 playButton.addEventListener('click', clickPlay);
@@ -100,3 +130,5 @@ progressMusic.addEventListener('click', function changeMusicDuration(event) {
 // Make slider draggable
 slider.addEventListener('mousedown', mouseDown);
 window.addEventListener('mouseup', mouseUp);
+// Expand or narrow lyric section
+expandLyric.addEventListener('click', viewMoreLyric);

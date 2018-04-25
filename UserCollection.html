@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="./styles/owl.theme.default.css">
+    <link rel="stylesheet" href="./styles/UserCollection.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav id="big-nav" class="navbar bg-dark navbar-dark fixed-top d-flex align-content-center justify-content-around">
+        <!-- Links -->
+        <ul class="nav text-darkbtn-dark d-flex justify-content-end">
+            <li class="nav-item">
+                <a class="navbar-brand text-white" href="#">VatKathon</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white bg-success" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white btn-dark" href="#">Collection</a>
+            </li>
+        </ul>
+
+        <form class="form-inline">
+            <input class="form-control mr-sm-2 big-nav-search" type="search" placeholder="Search" style="width: 40vw;">
+        </form>
+
+        <div class="btn-group user-menu">
+            <button type="button" class="btn btn-sm btn-dark">
+                <img class="rounded-circle" src="./assets/images/avatar.png" alt=""> Pink Guy</button>
+            <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="user-banner">
+                        <div class="d-flex">
+                            <div class="user-cover ml-2">
+                                <img src="./assets/images/albumcover.jpg" class="img-fluid img-thumbnail" alt="" width="200px">
+                            </div>
+                            <div class="user-name text-light align-self-center pl-5">
+                                <div class="track-detail-name">Pink Guy</div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="main-view col-md-9 col-sm-12 mt-3">
+                <section class="collection-content">
+                    <h3>Popular</h3>
+                    <ul class="list-group" id='song-selector'>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <div class="track-number">01</div>
+                                <div class="track-name">
+                                    <a href="#">STFU</a>
+                                </div>
+                                <div class="track-artists">
+                                    <a href="#">Pink Guy</a>
+                                </div>
+                                <div class="track-tools">
+                                    <a href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <div class="track-number">02</div>
+                                <div class="track-name">
+                                    <a href="#">Club Bangger 3000</a>
+                                </div>
+                                <div class="track-artists">
+                                    <a href="#">Pink Guy</a>
+                                </div>
+                                <div class="track-tools">
+                                    <a href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <div class="track-number">03</div>
+                                <div class="track-name">
+                                    <a href="#">High School Blink 193</a>
+                                </div>
+                                <div class="track-artists">
+                                    <a href="#">Pink Guy</a>
+                                </div>
+                                <div class="track-tools">
+                                    <a href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <div class="track-number">04</div>
+                                <div class="track-name">
+                                    <a href="#">I do it for my hood</a>
+                                </div>
+                                <div class="track-artists">
+                                    <a href="#">Pink Guy</a>
+                                </div>
+                                <div class="track-tools">
+                                    <a href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <div class="track-number">05</div>
+                                <div class="track-name">
+                                    <a href="#">Fried Noodle</a>
+                                </div>
+                                <div class="track-artists">
+                                    <a href="#">Pink Guy</a>
+                                </div>
+                                <div class="track-tools">
+                                    <a href="">
+                                        <i class="fas fa-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </section>
+
+                <section class="collection-content mt-3">
+                    <h3 class="mt-2">
+                        <a class="text-dark" href="#">Album Pink Guy</a>
+                    </h3>
+                    <!--Add owl carousel-->
+                    <div class="card-deck owl-carousel mt-3">
+
+                        <div class="card thumbnail-holder">
+                            <img class="card-img-top img-fluid" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                            <h6 class="">Pink Season</h6>
+                            <small class="card-text text-muted">Pink Guy</small>
+                        </div>
+
+                        <div class="card thumbnail-holder">
+                            <img class="card-img-top img-fluid" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                            <h6 class="">Pink Season</h6>
+                            <small class="card-text text-muted">Pink Guy</small>
+                        </div>
+
+                        <div class="card thumbnail-holder">
+                            <img class="card-img-top img-fluid" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                            <h6 class="">Pink Season</h6>
+                            <small class="card-text text-muted">Pink Guy</small>
+                        </div>
+
+                        <div class="card thumbnail-holder">
+                            <img class="card-img-top img-fluid" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                            <h6 class="">Pink Season</h6>
+                            <small class="card-text text-muted">Pink Guy</small>
+                        </div>
+
+                        <div class="card thumbnail-holder">
+                            <img class="card-img-top img-fluid" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                            <h6 class="">Pink Season</h6>
+                            <small class="card-text text-muted">Pink Guy</small>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- <section class="collection-content mt-5">
+
+        </section> -->
+            </div>
+
+            <div class="top-chart mt-4 d-flex flex-column col-md-3 col-sm-auto">
+                <h5>Fan Also Like</h5>
+                <table class="table mt-3">
+                    <tbody>
+                        <tr class="users-item">
+                            <td class="d-flex flex-row">
+                                <img class="img-fluid rounded-circle" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                                <div class="d-flex flex-column align-self-center ml-2">
+                                    <h7 class="card-title">Pink Season</h7>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="users-item">
+                            <td class="d-flex flex-row">
+                                <img class="img-fluid rounded-circle" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                                <div class="d-flex flex-column align-self-center ml-2">
+                                    <h7 class="card-title">Pink Season</h7>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="users-item">
+                            <td class="d-flex flex-row">
+                                <img class="img-fluid rounded-circle" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                                <div class="d-flex flex-column align-self-center ml-2">
+                                    <h7 class="card-title">Pink Season</h7>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="users-item">
+                            <td class="d-flex flex-row">
+                                <img class="img-fluid rounded-circle" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                                <div class="d-flex flex-column align-self-center ml-2">
+                                    <h7 class="card-title">Pink Season</h7>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="users-item">
+                                <td class="d-flex flex-row">
+                                    <img class="img-fluid rounded-circle" src="./assets/images/albumcover.jpg" alt="Card image cap">
+                                    <div class="d-flex flex-column align-self-center ml-2">
+                                        <h7 class="card-title">Pink Season</h7>
+                                    </div>
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <!-- <div class=""> -->
+    <nav class="navbar bg-dark navbar-dark fixed-bottom small-nav">
+        <ul class="navbar-nav d-flex flex-row justify-content-around">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-music"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <img class="rounded-circle" src="./assets/images/avatar.png" alt="" style="width: 10vw;">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- </div> -->
+
+    <script src="./scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/owl.carousel.min.js"></script>
+    <script src="./scripts/fontawesome-all.js"></script>
+    <script src="./scripts/UserCollection.js"></script>
+</body>
+
+</html>

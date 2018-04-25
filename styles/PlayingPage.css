@@ -65,6 +65,13 @@
   border: none;
 }
 /* Music player */
+#play-button {
+  background: #292e33;
+}
+.player-time {
+  font-size: 1rem !important;
+  align-self: center;
+}
 .track-detail-player {
   background: url("../assets/images/banner1.jpg");
   background-repeat: no-repeat;
@@ -75,18 +82,63 @@
   font-size: 1.3rem;
   color: white;
 }
-.track-name {
+.buttons-player:hover{
+  color: springgreen;
+}
+.track-detail-name {
   font-size: 2.7rem;
 }
-
-#slider{
-  position: relative;
-  width: 3vw;
-  height: 1.5vw;
-  background: blue;
-  align-self: center;
+.music-quality {
+  border: 3px solid white;
+  border-radius: 15px;
+  text-align: center;
+  background: #292e33;
 }
-
-.progress:hover{
-  overflow: visible;
+.music-quality:hover {
+  -moz-box-shadow: 0 0 3px springgreen;
+  -webkit-box-shadow: 0 0 3px springgreen;
+  box-shadow: 0 0 3px springgreen;
+}
+#slider {
+  width: 1vw;
+  height: 1vw;
+  background: #292e33;
+  align-self: center;
+  display: none;
+  visibility: hidden;
+  z-index: -1;
+}
+#progress-current-music {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+#progress-music:hover {
+  -moz-box-shadow: 0 0 3px springgreen;
+  -webkit-box-shadow: 0 0 3px springgreen;
+  box-shadow: 0 0 3px springgreen;
+}
+#progress-music:hover #slider {
+  display: block;
+  visibility: visible;
+  z-index: 1;
+}
+/* Song selector */
+#song-selector a{
+  color: #495057;
+}
+.track-number{
+  flex-basis: 10%;
+}
+.track-name{
+  flex-basis: 40%;
+}
+.track-artists{
+  flex-basis: 40%;
+}
+.track-tools{
+  flex-basis: 10%;
+}
+/* Lyric section */
+#lyric-content{
+  height: 50vh;
+  overflow: hidden;
 }
