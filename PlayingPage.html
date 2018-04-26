@@ -55,7 +55,7 @@
       <div class="main-view col-md-9 col-sm-12">
 
         <section class="collection-content">
-          <audio id="music">
+          <audio controls id="music">
             <source src="./assets/audios/audio.mp3" type="audio/mpeg">
           </audio>
           <div class="music-player">
@@ -91,16 +91,16 @@
               <!-- Progress bar -->
 
               <div id="progress-music" class="progress" style="flex-basis: 50%;align-self: center;border-radius: inherit">
-                <div id="progress-current-music" class="progress-bar" role="progressbar"></div>
-                <div id="slider"></div>
+                <div id="progress-current-music" class="progress-bar" role="progressbar"><div id="slider"></div></div>
+                
               </div>
 
               <!-- Song duration -->
               <div id="song-duration" class="player-time buttons-player">0:00</div>
               <!-- Volume button -->
               <div id="volume-bar" class="progress" style="flex-basis: 10%;align-self: center">
-                  <div id='volume-percent' class="progress-bar"></div>
-                  <div id='volume-slider'></div>
+                  <div id='current-volume' class="progress-bar"></div>
+                  <div id='slider-volume'></div>
               </div>
               <div class="buttons-player">
                 <i class="fas fa-volume-up"></i>

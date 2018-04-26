@@ -103,7 +103,7 @@
   width: 1.2vw;
   height: 1.2vw;
   background: #292e33;
-  align-self: center;
+  align-self: flex-end;
   display: none;
   visibility: hidden;
   z-index: -1;
@@ -141,4 +141,10 @@
 #lyric-content{
   height: 50vh;
   overflow: hidden;
+}
+/* Volume bar */
+#slider-volume{
+  width: 20px;
+  height: 20px;
+  background: rebeccapurple;
 }

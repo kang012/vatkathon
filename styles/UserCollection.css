@@ -103,7 +103,7 @@
     width: 1vw;
     height: 1vw;
     background: #292e33;
-    align-self: center;
+    align-self: flex-end;
     display: none;
     visibility: hidden;
     z-index: -1;
