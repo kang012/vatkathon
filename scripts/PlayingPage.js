@@ -9,7 +9,10 @@ var progressMusic = document.getElementById('progress-music');
 var currentProgress = document.getElementById('progress-current-music');
 var expandLyric = document.getElementById('expand-lyric');
 var lyricContent = document.getElementById('lyric-content');
-var progressMusicWidth = progressMusic.offsetWidth - slider.offsetWidth;
+var volumePercent = document.getElementById('volume-percent');
+var volumeBar = document.getElementById('volumn-bar');
+var volumeSlider = document.getElementById('volume-slider');
+var progressMusicWidth = progressMusic.offsetWidth;
 var onHold = false;
 var lyricNotExpended = true;
 $(document).ready(function () {
@@ -46,9 +49,9 @@ window.onscroll = function hideNav() {
   prevScrollPos = currentScrollPos;
 };
 // Convert second to min:sec
-function secondToMin(second) {
-  var sec = Math.floor(second) % 60;
-  var min = Math.round(Math.floor(second) / 60);
+function secondToMin(inputTime) {
+  var sec = Math.floor(inputTime) % 60;
+  var min = Math.trunc(Math.floor(inputTime) / 60);
   if (sec < 10) {
     return min + ':0' + sec;
   }
@@ -57,7 +60,7 @@ function secondToMin(second) {
 // sync slider with current music time
 function timeUpdate() {
   var playTime = progressMusicWidth * (music.currentTime / music.duration);
-  currentProgress.style.width = ((playTime - slider.offsetWidth) / 2) + 'px';
+  currentProgress.style.width = ((playTime - slider.offsetWidth)) + 'px';
   currentTime.innerHTML = secondToMin(music.currentTime);
   songDuration.innerHTML = secondToMin(music.duration);
   if (music.ended) {
@@ -132,3 +135,4 @@ slider.addEventListener('mousedown', mouseDown);
 window.addEventListener('mouseup', mouseUp);
 // Expand or narrow lyric section
 expandLyric.addEventListener('click', viewMoreLyric);
+// make volumn draggable

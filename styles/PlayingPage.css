@@ -100,8 +100,8 @@
   box-shadow: 0 0 3px springgreen;
 }
 #slider {
-  width: 1vw;
-  height: 1vw;
+  width: 1.2vw;
+  height: 1.2vw;
   background: #292e33;
   align-self: center;
   display: none;
